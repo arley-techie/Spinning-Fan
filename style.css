@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 10em auto;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container img {
+    width: 50vw;
+    animation-iteration-count: infinite;
+    
+}
+
+.container img:hover {
+    animation-name: spin;
+    animation-duration: 100ms;
+    animation-play-state: running;
+}
+
+.container img:active {
+    animation-play-state: paused;
+}
+
+.container h1 {
+    font-size: 1rem;
+}
